@@ -1,4 +1,3 @@
-// Smooth scroll for contact link
 document.addEventListener('click',(e)=>{
   const a=e.target.closest('a.contact-link');
   if(!a)return;
@@ -9,13 +8,10 @@ document.addEventListener('click',(e)=>{
   }
 });
 
-// Auto-load images from assets/img/ folder
 const gallery = document.querySelector('.gallery');
 if(gallery && gallery.id === 'gallery'){
-  // GitHub raw content URL
   const imgFolder = 'https://raw.githubusercontent.com/JuliannaGulianna/following-seas-site/main/assets/img/';
   
-  // List your image filenames here (update this array when you add images)
   const images = [
     'artwork1.jpg',
     'artwork2.jpg',
@@ -30,13 +26,12 @@ if(gallery && gallery.id === 'gallery'){
   images.forEach((img, idx) => {
     const tile = document.createElement('div');
     tile.className = 'tile portrait';
-    tile.innerHTML = `<img src="${imgFolder}${img}" alt="Artwork ${idx+1}" loading="lazy">`;
-    tile.onclick = () => openModal(`${imgFolder}${img}`);
+    tile.innerHTML = '<img src="' + imgFolder + img + '" alt="Artwork ' + (idx+1) + '" loading="lazy">';
+    tile.onclick = () => openModal(imgFolder + img);
     gallery.appendChild(tile);
   });
 }
 
-// Modal functions
 const modal = document.getElementById('imageModal');
 const modalImg = document.getElementById('modalImg');
 const closeBtn = document.querySelector('.modal-close');
