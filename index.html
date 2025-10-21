@@ -23,19 +23,13 @@
 </header>
 
 <section class="hero">
-  <h1>FOLLOWING SEAS <span class="reg">&reg;</span></h1>
-  <p class="tagline">minimal, modern, coastal-inspired prints</p>
+  <h1>FOLLOWING SEAS<span class="reg">&reg;</span></h1>
+  <p class="tagline">may the wind be always at your back</p>
   <a class="cta" href="#gallery">View Prints</a>
 </section>
 
 <main id="gallery" class="gallery">
-  <!-- Replace these placeholders by uploading images into /assets/img -->
-  <a class="tile portrait ph"><span>Artwork 1</span></a>
-  <a class="tile portrait ph"><span>Artwork 2</span></a>
-  <a class="tile portrait ph"><span>Artwork 3</span></a>
-  <a class="tile portrait ph"><span>Artwork 4</span></a>
-  <a class="tile portrait ph"><span>Artwork 5</span></a>
-  <a class="tile portrait ph"><span>Artwork 6</span></a>
+  <!-- Auto-populated from assets/img/ folder -->
 </main>
 
 <section id="subscribe" class="subscribe">
@@ -45,15 +39,19 @@
     <input type="email" placeholder="Email address" required />
     <button type="submit">Notify Me</button>
   </form>
-  <p class="note">Contact uses email for now. Later we can add Stripe or Shopify buttons beneath tiles.</p>
 </section>
 
 <footer class="site-footer">
   <div class="footer-brand">
     <span class="brand-box">FOLLOWING SEAS</span><span class="brand-small"> Art Co.</span>
-    <div class="footer-tagline">Tagline placeholder</div>
   </div>
   <div class="copyright">&copy; 2025 Following Seas.</div>
 </footer>
+
+<!-- Modal for expanded images -->
+<div id="imageModal" class="modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
 </body>
 </html>
