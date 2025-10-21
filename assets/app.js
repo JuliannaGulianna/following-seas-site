@@ -1,0 +1,1 @@
+document.addEventListener('click',(e)=>{const a=e.target.closest('a.contact-link');if(!a)return;const t=document.querySelector('#subscribe');if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}});
