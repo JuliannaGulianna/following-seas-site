@@ -1,63 +1,75 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>FOLLOWING SEAS art co.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css" />
-<script defer src="assets/app.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FOLLOWING SEAS art co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/app.js"></script>
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html">
-    <span class="brand-box">FOLLOWING SEAS</span><span class="brand-small"> Art Co.</span>
-  </a>
-  <nav class="nav">
-    <a href="about.html">About</a>
-    <a href="sneak-peek.html">Sneak Peek</a>
-    <a href="blog.html">Blog</a>
-    <a href="#subscribe" class="contact-link">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>FOLLOWING SEAS<span class="reg">&reg;</span></h1>
-  <p class="tagline">may the wind be always at your back</p>
-  <a class="cta" href="#gallery">View Prints</a>
-</section>
-
-<main id="gallery" class="gallery">
-  <div class="tile portrait ph"><span>Artwork 1</span></div>
-  <div class="tile portrait ph"><span>Artwork 2</span></div>
-  <div class="tile portrait ph"><span>Artwork 3</span></div>
-  <div class="tile portrait ph"><span>Artwork 4</span></div>
-  <div class="tile portrait ph"><span>Artwork 5</span></div>
-  <div class="tile portrait ph"><span>Artwork 6</span></div>
-</main>
-
-<section id="subscribe" class="subscribe">
-  <h2>Subscribe</h2>
-  <p>Get sneak peeks, drops, and print restocks.</p>
-  <form onsubmit="return false" class="subscribe-form">
-    <input type="email" placeholder="Email address" required />
-    <button type="submit">Notify Me</button>
-  </form>
-</section>
-
-<footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-brand">
+  <header class="site-header">
+    <a class="brand" href="index.html">
       <span class="brand-box">FOLLOWING SEAS</span><span class="brand-small"> Art Co.</span>
-    </div>
-    <div class="copyright">&copy; 2025 Following Seas.</div>
-  </div>
-</footer>
+    </a>
+    <nav class="nav">
+      <a href="about.html">About</a>
+      <a href="sneak-peek.html">Sneak Peek</a>
+      <a href="blog.html">Blog</a>
+      <a href="#subscribe" class="contact-link">Contact</a>
+    </nav>
+  </header>
 
-<div id="imageModal" class="modal">
-  <span class="modal-close">&times;</span>
-  <img class="modal-content" id="modalImg">
-</div>
+  <section class="hero">
+    <h1>FOLLOWING SEAS<span class="reg">&reg;</span></h1>
+    <p class="tagline">may the wind be always at your back</p>
+    <a class="cta" href="#gallery">View Prints</a>
+  </section>
+
+  <main id="gallery" class="gallery">
+    <a class="tile portrait" href="assets/img/01-octo-framed.jpg">
+      <img src="assets/img/01-octo-framed.jpg" alt="Octopus framed artwork" style="width:100%;height:auto;">
+    </a>
+    <a class="tile portrait" href="assets/img/02-sharks-framed.jpg">
+      <img src="assets/img/02-sharks-framed.jpg" alt="Sharks framed artwork" style="width:100%;height:auto;">
+    </a>
+    <a class="tile portrait" href="assets/img/03-fish-framed.jpg">
+      <img src="assets/img/03-fish-framed.jpg" alt="Fish framed artwork" style="width:100%;height:auto;">
+    </a>
+    <a class="tile portrait" href="assets/img/04-bill-shark.jpg">
+      <img src="assets/img/04-bill-shark.jpg" alt="Bill shark artwork" style="width:100%;height:auto;">
+    </a>
+    <a class="tile portrait" href="assets/img/05-shoes-fish.jpg">
+      <img src="assets/img/05-shoes-fish.jpg" alt="Shoes fish artwork" style="width:100%;height:auto;">
+    </a>
+    <a class="tile portrait" href="assets/img/06-shoes-seahorse.jpg">
+      <img src="assets/img/06-shoes-seahorse.jpg" alt="Shoes seahorse artwork" style="width:100%;height:auto;">
+    </a>
+  </main>
+
+  <section id="subscribe" class="subscribe">
+    <h2>Subscribe</h2>
+    <p>Get sneak peeks, drops, and print restocks.</p>
+    <form onsubmit="return false" class="subscribe-form">
+      <input type="email" placeholder="Email address" required />
+      <button type="submit">Notify Me</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="brand-box">FOLLOWING SEAS</span><span class="brand-small"> Art Co.</span>
+      </div>
+      <div class="copyright">&copy; 2025 Following Seas.</div>
+    </div>
+  </footer>
+
+  <div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
 </body>
 </html>
