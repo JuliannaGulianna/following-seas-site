@@ -1,52 +1,71 @@
-document.addEventListener('click',(e)=>{
-  const a=e.target.closest('a.contact-link');
-  if(!a)return;
-  const t=document.querySelector('#subscribe');
-  if(t){
+// ============================================
+// FOLLOWING SEAS - COMPLETE JAVASCRIPT
+// Replace ENTIRE contents of assets/app.js
+// ============================================
+
+// SMOOTH SCROLL FOR CONTACT LINK
+document.addEventListener('click', (e) => {
+  const contactLink = e.target.closest('a[href="#subscribe"]');
+  if (!contactLink) return;
+  
+  const subscribeSection = document.querySelector('#subscribe');
+  if (subscribeSection) {
     e.preventDefault();
-    t.scrollIntoView({behavior:'smooth',block:'start'});
+    subscribeSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   }
 });
 
-const gallery = document.querySelector('.gallery');
-if(gallery && gallery.id === 'gallery'){
-  const imgFolder = 'https://raw.githubusercontent.com/JuliannaGulianna/following-seas-site/main/assets/img/';
-  
-  const images = [
-    'artwork1.jpg',
-    'artwork2.jpg',
-    'artwork3.jpg',
-    'artwork4.jpg',
-    'artwork5.jpg',
-    'artwork6.jpg'
-  ];
-  
-  gallery.innerHTML = '';
-  
-  images.forEach((img, idx) => {
-    const tile = document.createElement('div');
-    tile.className = 'tile portrait';
-    tile.innerHTML = '<img src="' + imgFolder + img + '" alt="Artwork ' + (idx+1) + '" loading="lazy">';
-    tile.onclick = () => openModal(imgFolder + img);
-    gallery.appendChild(tile);
+// LIGHTBOX FUNCTIONALITY
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+// Add click listeners to all gallery items with lightbox
+const galleryItems = document.querySelectorAll('[data-lightbox]');
+galleryItems.forEach(item => {
+  item.addEventListener('click', function() {
+    const imgSrc = this.getAttribute('data-lightbox');
+    const imgAlt = this.querySelector('img').getAttribute('alt');
+    
+    if (lightboxImg) {
+      lightboxImg.src = imgSrc;
+      lightboxImg.alt = imgAlt;
+    }
+    
+    if (lightbox) {
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+
+// Close lightbox when clicking X
+if (lightboxClose) {
+  lightboxClose.addEventListener('click', closeLightbox);
+}
+
+// Close lightbox when clicking outside image
+if (lightbox) {
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
   });
 }
 
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImg');
-const closeBtn = document.querySelector('.modal-close');
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+    closeLightbox();
+  }
+});
 
-function openModal(src) {
-  modal.classList.add('active');
-  modalImg.src = src;
-}
-
-if(closeBtn) {
-  closeBtn.onclick = () => modal.classList.remove('active');
-}
-
-if(modal) {
-  modal.onclick = (e) => {
-    if(e.target === modal) modal.classList.remove('active');
-  };
+function closeLightbox() {
+  if (lightbox) {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }

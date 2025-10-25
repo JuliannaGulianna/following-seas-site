@@ -1,40 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Sneak Peek - FOLLOWING SEAS art co.</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sneak Peek - FOLLOWING SEAS art co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="index.html"><span class="brand-box">FOLLOWING SEAS</span><span class="brand-small"> Art Co.</span></a>
-  <nav class="nav">
-    <a href="about.html">About</a>
-    <a href="sneak-peek.html" aria-current="page">Sneak Peek</a>
-    <a href="blog.html">Blog</a>
-    <a href="index.html#subscribe">Contact</a>
-  </nav>
-</header>
-
-<main class="page">
-  <h1>Sneak Peek</h1>
-  <p class="lede">Sketches and works-in-progress that will become future prints.</p>
-  <section class="gallery">
-    <div class="tile portrait ph seafoam"><span>Sketch A</span></div>
-    <div class="tile portrait ph mustard"><span>Sketch B</span></div>
-    <div class="tile portrait ph"><span>Sketch C</span></div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="footer-content">
-    <div class="footer-brand">
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
       <span class="brand-box">FOLLOWING SEAS</span><span class="brand-small"> Art Co.</span>
+    </a>
+    <nav class="nav">
+      <a href="about.html">ABOUT</a>
+      <a href="sneak-peek.html" aria-current="page">SNEAK PEEK</a>
+      <a href="blog.html">BLOG</a>
+      <a href="index.html#subscribe">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- SNEAK PEEK CONTENT - FULL SIZE IMAGES -->
+  <main class="page">
+    <h1>Sneak Peek</h1>
+    <p class="lede">Sketches and works-in-progress that will become future prints.</p>
+    
+    <section class="gallery-section">
+      <div class="gallery-grid-fullsize">
+        <!-- Sketch A -->
+        <div class="gallery-item-fullsize">
+          <img 
+            src="assets/img/sketch-a.jpg" 
+            alt="Sketch A"
+            loading="lazy"
+            class="gallery-img-fullsize"
+          />
+        </div>
+
+        <!-- Sketch B -->
+        <div class="gallery-item-fullsize">
+          <img 
+            src="assets/img/sketch-b.jpg" 
+            alt="Sketch B"
+            loading="lazy"
+            class="gallery-img-fullsize"
+          />
+        </div>
+
+        <!-- Sketch C -->
+        <div class="gallery-item-fullsize">
+          <img 
+            src="assets/img/sketch-c.jpg" 
+            alt="Sketch C"
+            loading="lazy"
+            class="gallery-img-fullsize"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="brand-box">FOLLOWING SEAS</span><span class="brand-small"> Art Co.</span>
+      </div>
+      <div class="copyright">&copy; 2025 Following Seas.</div>
     </div>
-    <div class="copyright">&copy; 2025 Following Seas.</div>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
